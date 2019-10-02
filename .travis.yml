@@ -19,6 +19,8 @@ jobs:
       addons:
         mariadb: '10.2'
       install: skip
+      before_install:
+        - chmod +x gradlew
       before_script:
         - mysql -uroot < databases/create_databases.sql
         - ./gradlew testMigrate
@@ -63,6 +65,8 @@ jobs:
       addons:
         mariadb: '10.2'
       install: skip
+      before_install:
+        - chmod +x gradlew
       before_script:
         - mysql -uroot < databases/create_databases.sql
         - ./gradlew testMigrate
@@ -83,6 +87,8 @@ jobs:
       addons:
         mariadb: '10.2'
       install: skip
+      before_install:
+        - chmod +x gradlew
       before_script:
         - mysql -uroot < databases/create_databases.sql
         - ./gradlew testMigrate
