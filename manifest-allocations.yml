@@ -6,7 +6,7 @@ applications:
   memory: 512M
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://lenin-govindan-allocations.cfapps.io/registration
+    REGISTRATION_SERVER_ENDPOINT: https://lenin-govindan-allocations.cfapps.io/
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
