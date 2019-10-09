@@ -3,7 +3,7 @@ applications:
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: lenin-govindan-registration.cfapps.io
-    memory: 512M
+  memory: 512M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: https://lenin-govindan-registration.cfapps.io/
