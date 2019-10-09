@@ -26,6 +26,7 @@ public class TimeEntryController {
         this.client = client;
     }
 
+
     @PostMapping
     public ResponseEntity<TimeEntryInfo> create(@RequestBody TimeEntryForm form) {
         if (projectIsActive(form.projectId)) {
@@ -41,6 +42,7 @@ public class TimeEntryController {
             .map(this::present)
             .collect(toList());
     }
+
 
     private TimeEntryInfo present(TimeEntryRecord record) {
         return timeEntryInfoBuilder()
