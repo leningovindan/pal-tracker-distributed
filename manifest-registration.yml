@@ -1,12 +1,12 @@
 applications:
-- name: tracker-registration
-  path: ./applications/registration-server/build/libs/registration-server.jar
-  routes:
-  - route: lenin-govindan-registration.cfapps.io
-  memory: 500M
-  instances: 1
-  env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-    JAVA_OPTS: '-Xmx250m -Xss100m'
-  services:
-  - tracker-service-registry
+  - name: tracker-registration
+    path: ./applications/registration-server/build/libs/registration-server.jar
+    routes:
+      - route: lenin-govindan-registration.cfapps.io
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+      - tracker-registration-database
+      - tracker-service-registry
