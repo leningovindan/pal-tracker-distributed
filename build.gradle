@@ -17,6 +17,7 @@ buildscript {
         springCloudVersion = "Finchley.SR2"
         springCloudServicesClientLibrariesVersion = "2.0.2.RELEASE"
         springCloudCommonsVersion = "2.0.0.RELEASE"
+        hystrixJavanicaVersion = "1.5.18"
         springSecurityVersion = "3.2.0.RELEASE"
     }
 
@@ -49,6 +50,7 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
+        compile "org.springframework.security:spring-security-config:$springSecurityVersion"
 
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"
